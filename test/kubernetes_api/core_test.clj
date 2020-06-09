@@ -7,8 +7,10 @@
 
 (comment
 
-  ;;I expect this to create a client if i have kubectl proxy running but it doesn't
-  (def k8s (k8s-api/client "http://localhost:8001/api/" {}))
+
+  ;; NOTE you need to run kubectl proxy --expose 8001
+
+  (def k8s (k8s-api/client "http://localhost:8001" {}))
 
 
   ;;(k8s-api/explore k8s :Deployment)
